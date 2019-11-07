@@ -1,7 +1,7 @@
 /// <reference types="react" />
 
 declare namespace React {
-  interface AmpHTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
+  interface AmpHTMLAttributes<T> extends HTMLAttributes<T> {
     fallback?: boolean
     height?: string
     heights?: string

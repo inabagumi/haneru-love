@@ -1,6 +1,7 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
+import Icon from '../components/icon'
 
 export const config = {
   amp: true
@@ -11,62 +12,72 @@ const Home: NextPage = (): JSX.Element => {
     <>
       <Head>
         <title>Haneru Inaba - ALWAYS WATCHING YOU</title>
-        <link href="https://fonts.googleapis.com/css?display=swap&family=Lato" rel="stylesheet" />
+
+        <script
+          async
+          custom-element="amp-fx-collection"
+          src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"
+        />
       </Head>
 
       <div className="hero">
-        <h1 className="headline">
+        <h1 amp-fx="parallax" className="headline" data-parallax-factor="1.2">
           <div className="headline__content">
             <span className="headline__given-name">Haneru</span>{' '}
             <span className="headline__family-name">Inaba</span>
           </div>
         </h1>
+
+        <amp-img className="headline__cover" layout="fill" src="/cover.jpg" />
       </div>
 
-      <style jsx global>{`
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
-
-        html {
-          background-color: #000;
-          font-size: Lato, sans-serif;
-          line-height: 1;
-        }
-
-        body {
-          height: 200vh;
-        }
-      `}</style>
+      <main style={{ color: '#fff' }}>
+        <nav className="social-links">
+          <ul className="social-links__list">
+            <li className="social-links__item">
+              <a
+                className="social-links__link"
+                href="https://twitter.com/Haneru_Inaba"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Follow us on Twitter"
+              >
+                <Icon height={128} name="twitter" width={128} />
+              </a>
+            </li>
+            <li className="social-links__item">
+              <a
+                className="social-links__link"
+                href="https://www.youtube.com/channel/UC0Owc36U9lOyi9Gx9Ic-4qg/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Subscribe us on YouTube"
+              >
+                <Icon height={128} name="youtube" width={128} />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </main>
 
       <style jsx>{`
         .hero {
           align-items: flex-start;
-          background-color: transparent;
-          background-image: url('/cover.jpg');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          color: rgba(255, 255, 255, 0.98);
           display: flex;
           flex-direction: column;
           justify-content: center;
-          min-height: 250px;
+          min-height: 350px;
           position: relative;
         }
 
         @media (min-width: 768px) {
           .hero {
-            background-attachment: fixed;
             min-height: 100vh;
           }
         }
 
         .hero::before {
-          backdrop-filter: blur(3px) saturate(1.8);
-          background-color: rgba(0, 0, 0, 0.85);
+          background-color: rgba(33, 33, 33, 0.85);
           bottom: 0;
           content: '';
           display: block;
@@ -78,7 +89,10 @@ const Home: NextPage = (): JSX.Element => {
         }
 
         .headline {
-          font-size: 2rem;
+          color: #fafafa;
+          font-size: 3rem;
+          font-style: italic;
+          font-weight: 700;
           line-height: 1.25;
           position: absolute;
           text-transform: uppercase;
@@ -95,7 +109,7 @@ const Home: NextPage = (): JSX.Element => {
         .headline__content {
           margin: 0 auto;
           max-width: 1024px;
-          padding: 1.5rem 1rem;
+          padding: 2rem 1.5rem;
         }
 
         @media (min-width: 768px) {
@@ -106,28 +120,34 @@ const Home: NextPage = (): JSX.Element => {
 
         @keyframes slide1 {
           0% {
-            transform: translate(40%);
+            color: rgba(250, 250, 250, 0);
+            transform: translate(20%);
           }
 
           50% {
+            color: rgba(250, 250, 250, 1);
             transform: translate(0%);
           }
 
           100% {
+            color: rgba(250, 250, 250, 1);
             transform: translate(0%);
           }
         }
 
         @keyframes slide2 {
           0% {
-            transform: translate(40%);
+            color: rgba(250, 250, 250, 0);
+            transform: translate(20%);
           }
 
           50% {
-            transform: translate(40%);
+            color: rgba(250, 250, 250, 0);
+            transform: translate(20%);
           }
 
           100% {
+            color: rgba(250, 250, 250, 1);
             transform: translate(0%);
           }
         }
@@ -145,6 +165,65 @@ const Home: NextPage = (): JSX.Element => {
 
         .headline__given-name {
           animation-name: slide1;
+        }
+
+        .headline__cover {
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .social-links {
+          align-items: center;
+          background-color: #212121;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 100vh;
+          padding: 2rem 1.5rem;
+        }
+
+        .social-links__list {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 0 auto;
+          max-width: 1024px;
+          width: 100%;
+        }
+
+        @media (min-width: 768px) {
+          .social-links__list {
+            flex-direction: row;
+            justify-content: space-around;
+          }
+        }
+
+        .social-links__item {
+          list-style: none;
+        }
+
+        .social-links__item:not(:first-child) {
+          margin-top: 5rem;
+        }
+
+        @media (min-width: 768px) {
+          .social-links__item:not(:first-child) {
+            margin-top: 0;
+          }
+        }
+
+        .social-links__link {
+          color: #fafafa;
+          display: block;
+          padding: 0.5rem;
+        }
+
+        .social-links__link:hover {
+          color: #e0e0e0;
         }
       `}</style>
     </>
