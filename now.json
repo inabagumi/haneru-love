@@ -1,0 +1,19 @@
+{
+  "alias": ["haneru.love"],
+  "builds": [
+    {
+      "config": {
+        "maxLambdaSize": "50mb"
+      },
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ],
+  "github": {
+    "silent": true
+  },
+  "name": "haneru-love",
+  "regions": ["hnd1"],
+  "scope": "inabagumi",
+  "version": 2
+}

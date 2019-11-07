@@ -1,0 +1,23 @@
+{
+  "author": "Haneru Developers",
+  "dependencies": {
+    "next": "^9.1.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^12.12.6",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "typescript": "^3.7.2"
+  },
+  "license": "MIT",
+  "name": "@inabagumi/haneru-love",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next"
+  },
+  "version": "1.0.0"
+}
