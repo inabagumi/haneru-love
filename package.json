@@ -7,17 +7,22 @@
   },
   "description": "",
   "devDependencies": {
+    "@inabagumi/prettier-config": "^1.1.0",
     "@types/node": "^12.12.6",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
+    "prettier": "^1.18.2",
     "typescript": "^3.7.2"
   },
   "license": "MIT",
   "name": "@inabagumi/haneru-love",
+  "prettier": "@inabagumi/prettier-config",
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next"
+    "dev": "next",
+    "format": "prettier --ignore-path .gitignore --write **/*.{json,ts,tsx}",
+    "format-check": "prettier --ignore-path .gitignore --check **/*.{json,ts,tsx}"
   },
   "version": "1.0.0"
 }

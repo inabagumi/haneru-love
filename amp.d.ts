@@ -24,6 +24,9 @@ declare namespace React {
 
 declare namespace JSX {
   interface IntrinsicElements {
-    "amp-img": React.DetailedHTMLProps<React.AmpImgHTMLAttribute<HTMLElement>, HTMLElement>
+    'amp-img': React.DetailedHTMLProps<
+      React.AmpImgHTMLAttribute<HTMLElement>,
+      HTMLElement
+    >
   }
 }
