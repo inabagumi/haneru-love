@@ -12,16 +12,10 @@ const Home: NextPage = (): JSX.Element => {
     <>
       <Head>
         <title>Haneru Inaba - ALWAYS WATCHING YOU</title>
-
-        <script
-          async
-          custom-element="amp-fx-collection"
-          src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"
-        />
       </Head>
 
       <div className="hero">
-        <h1 amp-fx="parallax" className="headline" data-parallax-factor="1.2">
+        <h1 className="headline">
           <div className="headline__content">
             <span className="headline__given-name">Haneru</span>{' '}
             <span className="headline__family-name">Inaba</span>
@@ -120,35 +114,57 @@ const Home: NextPage = (): JSX.Element => {
 
         @keyframes slide1 {
           0% {
-            color: rgba(250, 250, 250, 0);
             transform: translate(20%);
           }
 
           50% {
-            color: rgba(250, 250, 250, 1);
             transform: translate(0%);
           }
 
           100% {
-            color: rgba(250, 250, 250, 1);
             transform: translate(0%);
+          }
+        }
+
+        @keyframes fade1 {
+          0% {
+            color: rgba(250, 250, 250, 0);
+          }
+
+          50% {
+            color: rgba(250, 250, 250, 1);
+          }
+
+          100% {
+            color: rgba(250, 250, 250, 1);
           }
         }
 
         @keyframes slide2 {
           0% {
-            color: rgba(250, 250, 250, 0);
             transform: translate(20%);
           }
 
           50% {
-            color: rgba(250, 250, 250, 0);
             transform: translate(20%);
           }
 
           100% {
-            color: rgba(250, 250, 250, 1);
             transform: translate(0%);
+          }
+        }
+
+        @keyframes fade2 {
+          0% {
+            color: rgba(250, 250, 250, 0);
+          }
+
+          50% {
+            color: rgba(250, 250, 250, 0);
+          }
+
+          100% {
+            color: rgba(250, 250, 250, 1);
           }
         }
 
@@ -160,14 +176,18 @@ const Home: NextPage = (): JSX.Element => {
         }
 
         .headline__family-name {
-          animation-name: slide2;
+          animation-name: slide2, fade2;
         }
 
         .headline__given-name {
-          animation-name: slide1;
+          animation-name: slide1, fade2;
         }
 
         .headline__cover {
+          background-image: url('/cover-placeholder.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
           bottom: 0;
           left: 0;
           position: absolute;
