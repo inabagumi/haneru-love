@@ -32,6 +32,9 @@
   "name": "@inabagumi/haneru-love",
   "prettier": "@inabagumi/prettier-config",
   "private": true,
+  "resolutions": {
+    "node-fetch": "^2.6.1"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next",
