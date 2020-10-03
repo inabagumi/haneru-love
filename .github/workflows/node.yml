@@ -3,34 +3,33 @@ name: Node CI
 on:
   pull_request:
     branches:
-    - main
+      - main
   push:
     branches:
-    - main
+      - main
     tags:
-    - '!v*'
+      - '!v*'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-    - name: Restore cache
-      uses: actions/cache@v1
-      with:
-        path: node_modules
-        key: ${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          node-deps-
-    - name: Install dependencies
-      run: yarn install --frozen-lockfile
-    - name: Format check
-      run: yarn format-check
-    - name: Run lint
-      run: yarn lint
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Restore cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            node-deps-
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Format check
+        run: yarn format-check
+      - name: Run lint
+        run: yarn lint
