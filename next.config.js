@@ -2,6 +2,9 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
+  experimental: {
+    modern: true
+  },
   webpack(config, { defaultLoaders }) {
     config.module.rules.push({
       test: /\.(?:jpe?g|webp)$/,
