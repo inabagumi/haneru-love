@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: #fff;
     font-family: Lato, Noto Sans JP, sans-serif;
     line-height: 1;
+    scroll-behavior: smooth;
   }
 
   body {
