@@ -1,6 +1,5 @@
 import { SkipNavContent } from '@reach/skip-nav'
 import { NextPage } from 'next'
-import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { useCallback, useState } from 'react'
+import { useCallback, useState } from 'react'
 import type { FC } from 'react'
 import { MdClose, MdMenu } from 'react-icons/md'
 import styled from 'styled-components'
