@@ -1,4 +1,4 @@
-import { SkipNavLink } from '@reach/skip-nav'
+import { SkipNavLink as OriginalSkipNavLink } from '@reach/skip-nav'
 import Head from 'next/head'
 import React from 'react'
 import type { FC } from 'react'
@@ -27,6 +27,12 @@ const GlobalStyle = createGlobalStyle`
 
 const Container = styled.div`
   min-height: 100vh;
+`
+
+const SkipNavLink = styled(OriginalSkipNavLink)`
+  :focus {
+    z-index: 101;
+  }
 `
 
 const Footer = styled.footer`
