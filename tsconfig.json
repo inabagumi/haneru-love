@@ -15,5 +15,5 @@
     "target": "es2015"
   },
   "exclude": ["node_modules"],
-  "include": ["amp.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
