@@ -1,6 +1,5 @@
 import { SkipNavLink as OriginalSkipNavLink } from '@reach/skip-nav'
 import Head from 'next/head'
-import React from 'react'
 import type { FC } from 'react'
 import { FaTwitter, FaYoutube } from 'react-icons/fa'
 import styled, { createGlobalStyle } from 'styled-components'
