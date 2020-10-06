@@ -67,6 +67,11 @@ const Layout: FC<Props> = ({ children, title }) => {
         {title && <title>{title}</title>}
 
         <link
+          as="style"
+          href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lato:wght@400;900&amp;family=Noto+Sans+JP"
+          rel="preload"
+        />
+        <link
           href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lato:wght@400;900&amp;family=Noto+Sans+JP"
           rel="stylesheet"
         />
