@@ -63,6 +63,7 @@ const MenuItem = styled.li<MenuItemProps>`
   transition-duration: 0.3s;
   transition-property: opacity, transform;
   transition-timing-function: ease;
+  visibility: ${(props) => (props.show ? 'visible' : 'hidden')};
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     background-color: transparent;
@@ -71,6 +72,7 @@ const MenuItem = styled.li<MenuItemProps>`
     padding: 0 0.1em;
     transform: none;
     transition: none;
+    visibility: visible;
   }
 `
 
