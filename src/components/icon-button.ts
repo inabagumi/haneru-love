@@ -16,6 +16,7 @@ const IconButton = styled.button`
   width: 1.5em;
 
   :focus {
+    box-shadow: ${(props) => props.theme.palette.primary} 0 0 0 2px;
     outline: 0;
   }
 
