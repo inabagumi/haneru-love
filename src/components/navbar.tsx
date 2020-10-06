@@ -111,8 +111,16 @@ const Navbar: FC = () => {
 
   return (
     <Container>
-      <MenuButton onClick={hideMenu ? openMenu : closeMenu} type="button">
-        {hideMenu ? <MdMenu /> : <MdClose />}
+      <MenuButton
+        aria-label={hideMenu ? 'メニューを開く' : 'メニューを閉じる'}
+        onClick={hideMenu ? openMenu : closeMenu}
+        type="button"
+      >
+        {hideMenu ? (
+          <MdMenu aria-hidden="true" />
+        ) : (
+          <MdClose aria-hidden="true" />
+        )}
       </MenuButton>
       <Menu>
         <MenuItem show={!hideMenu}>
