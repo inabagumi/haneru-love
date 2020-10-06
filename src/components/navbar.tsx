@@ -18,7 +18,7 @@ const MenuButton = styled(IconButton)`
   font-size: 2rem;
   margin: 0.2em 0.2em auto auto;
 
-  @media (min-width: 960px) {
+  @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     display: none;
   }
 `
@@ -36,7 +36,7 @@ const Menu = styled.ul`
   top: 0;
   width: 0;
 
-  @media (min-width: 960px) {
+  @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -64,7 +64,7 @@ const MenuItem = styled.li<MenuItemProps>`
   transition-property: opacity, transform;
   transition-timing-function: ease;
 
-  @media (min-width: 960px) {
+  @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     background-color: transparent;
     border-bottom-width: 0;
     opacity: 1;
@@ -87,7 +87,7 @@ const NavLink = styled.a`
     color: inherit;
   }
 
-  @media (min-width: 960px) {
+  @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     border-radius: 0.25em;
     text-align: inherit;
     transition: background-color 0.5s ease;
