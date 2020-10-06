@@ -1091,6 +1091,11 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-9.5.4-canary.24.tgz#c28d88a3e8b36a9502784b155ef9899f1e105b4b"
   integrity sha512-yGsg74ssLoK8o7fFDZy6NBOUXU8lAh9zWUyueotgmEa6QhT9xAk2oDtSjNLQY1g/7mG4aYtrOx5LBV1R3hAlPw==
 
+"@next/eslint-plugin-next@^9.5.4-canary.24":
+  version "9.5.4-canary.24"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-9.5.4-canary.24.tgz#86b13debc5955ff94580e77a9c698d605677f494"
+  integrity sha512-TwJoapeaXRX7Pn+T8nZHDkBXnURlNvSiAkgUhK3+EWKObi6einwOeRVfuDkkf4euvDSSu0oLqgxI3K7qecz0pQ==
+
 "@next/polyfill-module@9.5.4-canary.24":
   version "9.5.4-canary.24"
   resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-9.5.4-canary.24.tgz#13e490e2b34125aeeadc3374db29b656c2f7e091"
