@@ -57,13 +57,19 @@ type MenuItemProps = {
 const MenuItem = styled.li<MenuItemProps>`
   background-color: #fff;
   margin: 0.25em 0;
+  opacity: ${(props) => (props.show ? 1 : 0)};
   padding: 0;
   transform: translateX(${(props) => (props.show ? -100 : 0)}%);
   transition-delay: ${(props) => props.delay ?? 0}s;
   transition-duration: 0.3s;
   transition-property: opacity, transform;
   transition-timing-function: ease;
-  visibility: ${(props) => (props.show ? 'visible' : 'hidden')};
+
+  :focus-within {
+    opacity: 1;
+    transform: translateX(-100%);
+    transition-delay: 0s;
+  }
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}px) {
     background-color: transparent;
@@ -72,7 +78,11 @@ const MenuItem = styled.li<MenuItemProps>`
     padding: 0 0.1em;
     transform: none;
     transition: none;
-    visibility: visible;
+
+    :focus-within {
+      transform: none;
+      transition: none;
+    }
   }
 `
 
@@ -130,17 +140,17 @@ const Navbar: FC = () => {
             <NavLink onClick={closeMenu}>Profile</NavLink>
           </Link>
         </MenuItem>
-        <MenuItem delay={0.3} show={!hideMenu}>
+        <MenuItem delay={hideMenu ? 0 : 0.3} show={!hideMenu}>
           <Link href="/#discography" passHref prefetch={false}>
             <NavLink onClick={closeMenu}>Discography</NavLink>
           </Link>
         </MenuItem>
-        <MenuItem delay={0.6} show={!hideMenu}>
+        <MenuItem delay={hideMenu ? 0 : 0.6} show={!hideMenu}>
           <Link href="/#news" passHref prefetch={false}>
             <NavLink onClick={closeMenu}>News</NavLink>
           </Link>
         </MenuItem>
-        <MenuItem delay={0.9} show={!hideMenu}>
+        <MenuItem delay={hideMenu ? 0 : 0.9} show={!hideMenu}>
           <Link href="/#goods" passHref prefetch={false}>
             <NavLink onClick={closeMenu}>Goods</NavLink>
           </Link>
