@@ -2,7 +2,7 @@
   "author": "Haneru Developers",
   "dependencies": {
     "@reach/skip-nav": "^0.11.2",
-    "next": "^9.5.4-canary.24",
+    "next": "^9.5.4",
     "react": "^17.0.0-rc.3",
     "react-dom": "^17.0.0-rc.3",
     "react-icons": "^3.11.0",
@@ -12,7 +12,7 @@
   "devDependencies": {
     "@inabagumi/eslint-config-react": "^6.0.1",
     "@inabagumi/prettier-config": "^1.1.2",
-    "@next/eslint-plugin-next": "^9.5.4-canary.24",
+    "@next/eslint-plugin-next": "^9.5.4",
     "@types/eslint": "^7.2.3",
     "@types/node": "^12.12.47",
     "@types/react": "^16.9.51",
