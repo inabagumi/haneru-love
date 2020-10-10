@@ -1,3 +1,4 @@
+import { useLocale } from '@react-aria/i18n'
 import Link from 'next/link'
 import { useCallback, useState } from 'react'
 import type { FC } from 'react'
@@ -112,6 +113,7 @@ const NavLink = styled.a`
 
 const Navbar: FC = () => {
   const [hideMenu, setHideMenu] = useState(true)
+  const { locale } = useLocale()
 
   const openMenu = useCallback(() => {
     setHideMenu(false)
@@ -124,35 +126,51 @@ const Navbar: FC = () => {
   return (
     <Container>
       <MenuButton
-        aria-label={hideMenu ? 'メニューを開く' : 'メニューを閉じる'}
+        aria-hidden
         onClick={hideMenu ? openMenu : closeMenu}
         type="button"
       >
-        {hideMenu ? (
-          <MdMenu aria-hidden="true" />
-        ) : (
-          <MdClose aria-hidden="true" />
-        )}
+        {hideMenu ? <MdMenu /> : <MdClose />}
       </MenuButton>
       <Menu>
         <MenuItem show={!hideMenu}>
           <Link href="/#profile" passHref prefetch={false}>
-            <NavLink onClick={closeMenu}>Profile</NavLink>
+            <NavLink
+              lang={locale !== 'en' ? 'en' : undefined}
+              onClick={closeMenu}
+            >
+              Profile
+            </NavLink>
           </Link>
         </MenuItem>
         <MenuItem delay={hideMenu ? 0 : 0.3} show={!hideMenu}>
           <Link href="/#discography" passHref prefetch={false}>
-            <NavLink onClick={closeMenu}>Discography</NavLink>
+            <NavLink
+              lang={locale !== 'en' ? 'en' : undefined}
+              onClick={closeMenu}
+            >
+              Discography
+            </NavLink>
           </Link>
         </MenuItem>
         <MenuItem delay={hideMenu ? 0 : 0.6} show={!hideMenu}>
           <Link href="/#news" passHref prefetch={false}>
-            <NavLink onClick={closeMenu}>News</NavLink>
+            <NavLink
+              lang={locale !== 'en' ? 'en' : undefined}
+              onClick={closeMenu}
+            >
+              News
+            </NavLink>
           </Link>
         </MenuItem>
         <MenuItem delay={hideMenu ? 0 : 0.9} show={!hideMenu}>
           <Link href="/#goods" passHref prefetch={false}>
-            <NavLink onClick={closeMenu}>Goods</NavLink>
+            <NavLink
+              lang={locale !== 'en' ? 'en' : undefined}
+              onClick={closeMenu}
+            >
+              Goods
+            </NavLink>
           </Link>
         </MenuItem>
       </Menu>

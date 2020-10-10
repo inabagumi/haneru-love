@@ -16,6 +16,12 @@
  * @see https://nextjs.org/docs/api-reference/next.config.js/introduction
  */
 const nextConfig = {
+  experimental: {
+    i18n: {
+      defaultLocale: 'en',
+      locales: ['en', 'ja']
+    }
+  },
   /**
    * @param {import('webpack').Configuration} config
    * @param {NextWebpackOptions} options

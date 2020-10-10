@@ -35,7 +35,7 @@ class Document extends NextDocument {
 
   render(): JSX.Element {
     return (
-      <Html lang="ja">
+      <Html>
         <Head />
 
         <body>
