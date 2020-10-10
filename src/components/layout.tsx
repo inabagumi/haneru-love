@@ -1,10 +1,20 @@
 import { SkipNavLink as OriginalSkipNavLink } from '@reach/skip-nav'
+import { useLocale, useMessageFormatter } from '@react-aria/i18n'
 import Head from 'next/head'
 import type { FC } from 'react'
 import { FaTwitter, FaYoutube } from 'react-icons/fa'
 import styled, { createGlobalStyle } from 'styled-components'
 import IconButton from './icon-button'
 import Navbar from './navbar'
+
+const messages = {
+  'en-US': {
+    skipToContent: 'Skip to content'
+  },
+  'ja-JP': {
+    skipToContent: 'コンテンツまでスキップ'
+  }
+}
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -15,8 +25,12 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     background-color: #fff;
-    font-family: Lato, Noto Sans JP, sans-serif;
+    font-family: Lato, sans-serif;
     line-height: 1;
+  }
+
+  html:lang(ja) {
+    font-family: Lato, Noto Sans JP, sans-serif;
   }
 
   body {
@@ -61,6 +75,9 @@ type Props = {
 }
 
 const Layout: FC<Props> = ({ children, title }) => {
+  const { locale } = useLocale()
+  const formatMessage = useMessageFormatter(messages)
+
   return (
     <>
       <Head>
@@ -68,19 +85,33 @@ const Layout: FC<Props> = ({ children, title }) => {
 
         <link
           as="style"
-          href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lato:wght@400;900&amp;family=Noto+Sans+JP"
+          href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lato:wght@400;900"
           rel="preload"
         />
         <link
-          href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lato:wght@400;900&amp;family=Noto+Sans+JP"
+          href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lato:wght@400;900"
           rel="stylesheet"
         />
+
+        {locale === 'ja' && (
+          <>
+            <link
+              as="style"
+              href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans+JP"
+              rel="preload"
+            />
+            <link
+              href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans+JP"
+              rel="stylesheet"
+            />
+          </>
+        )}
       </Head>
 
       <GlobalStyle />
 
       <Container>
-        <SkipNavLink>コンテンツにスキップ</SkipNavLink>
+        <SkipNavLink>{formatMessage('skipToContent')}</SkipNavLink>
 
         <Navbar />
 
@@ -98,6 +129,7 @@ const Layout: FC<Props> = ({ children, title }) => {
                 rel="noopener noreferrer"
                 role="button"
                 target="_blank"
+                translate="no"
               >
                 <FaTwitter aria-hidden="true" />
               </IconButton>
@@ -110,6 +142,7 @@ const Layout: FC<Props> = ({ children, title }) => {
                 rel="noopener noreferrer"
                 role="button"
                 target="_blank"
+                translate="no"
               >
                 <FaYoutube aria-hidden="true" />
               </IconButton>
