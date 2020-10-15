@@ -1,3 +1,9 @@
+const nextTranspileModules = require('next-transpile-modules')
+
+const withTM = nextTranspileModules(['postprocessing', 'three'], {
+  unstable_webpack5: true
+})
+
 /**
  * @typedef {Object} DefaultLoaders
  * @property {import('webpack').RuleSetRule} babel
@@ -29,7 +35,7 @@ const nextConfig = {
    */
   webpack(config, { defaultLoaders }) {
     config.module.rules.push({
-      test: /\.(?:jpe?g|webp)$/,
+      test: /\.(?:jpe?g|png|webp)$/,
       use: [
         defaultLoaders.babel,
         {
@@ -48,4 +54,4 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+module.exports = withTM(nextConfig)
