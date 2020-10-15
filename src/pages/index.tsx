@@ -1,16 +1,8 @@
 import { SkipNavContent } from '@reach/skip-nav'
-import { NextPage } from 'next'
+import type { NextPage } from 'next'
 import styled from 'styled-components'
+import Hero from '../components/hero'
 import Layout from '../components/layout'
-
-const Hero = styled.div`
-  align-items: center;
-  display: flex;
-  font-size: 2rem;
-  justify-content: center;
-  min-height: 100vh;
-  position: relative;
-`
 
 const Content = styled.main``
 
@@ -25,9 +17,7 @@ const Section = styled.section`
 const Home: NextPage = () => {
   return (
     <Layout title="Haneru Inaba - ALWAYS WATCHING YOU">
-      <Hero>
-        <p>hero</p>
-      </Hero>
+      <Hero />
 
       <SkipNavContent>
         <Content>
