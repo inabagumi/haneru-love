@@ -1261,10 +1261,10 @@
     "@react-spring/core" "9.0.0-rc.3"
     "@react-spring/shared" "9.0.0-rc.3"
 
-"@react-three/drei@^2.1.1-beta.3":
-  version "2.1.1-beta.3"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-2.1.1-beta.3.tgz#1560c5579cb48a1d9845c3d3d9ebab89eb60a986"
-  integrity sha512-mr9IXzpKQq/2GbMJA46HB30qF1MstilJj9F1zjdZDX6bSidCqsTVdjLK6dsjCvEWe/sFTD64S0RMzhs1M64LqQ==
+"@react-three/drei@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-2.1.1.tgz#5bfe22aa2724e6cf18604b77c2fac20edac8a9c2"
+  integrity sha512-Y6hyn/2B7MKRTE6BuClOxzzDLypdfvtqhtyq78sPUsVHnOzBK9VtRCjY2oYpGqL2Te1g4ibzaE2Bf6YPEA6ySg==
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@react-spring/web" "^9.0.0-rc.3"
@@ -1274,7 +1274,7 @@
     lodash.pick "^4.4.0"
     react-merge-refs "^1.0.0"
     stats.js "^0.17.0"
-    troika-three-text "^0.34.0-textoutline.5"
+    troika-three-text "^0.33.1"
     utility-types "^3.10.0"
     zustand "^3.0.3"
 
@@ -5405,10 +5405,10 @@ traverse@0.6.6:
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
   integrity sha1-y99WD9e5r2MlAv7UD5GMFX6pcTc=
 
-troika-three-text@^0.34.0-textoutline.5:
-  version "0.34.0-textoutline.6"
-  resolved "https://registry.yarnpkg.com/troika-three-text/-/troika-three-text-0.34.0-textoutline.6.tgz#a099a1eedd55cc30b67c62faa6abaf3668ca05b1"
-  integrity sha512-iHRRP6oYnxDzxhnR04S/h5/g/1G6XB+835qV1m9xUUv7b0i/Rj5GZEIwYqTdWmQ1Uep/ceA279UUDjCdaLS2ZQ==
+troika-three-text@^0.33.1:
+  version "0.33.1"
+  resolved "https://registry.yarnpkg.com/troika-three-text/-/troika-three-text-0.33.1.tgz#580d73cace99b5944c33faf7a53af295fd75ccba"
+  integrity sha512-t/73wO62QxkpUWwNOB68+vsCda5S9qLNufplqC2olO1OK4yVIo7Y5fNxtUYX9SelRU5sXiLpmMqVxVfaZQPX9g==
   dependencies:
     troika-three-utils "^0.33.1"
     troika-worker-utils "^0.33.0"
