@@ -22,11 +22,9 @@ const withTM = nextTranspileModules(['postprocessing', 'three'], {
  * @see https://nextjs.org/docs/api-reference/next.config.js/introduction
  */
 const nextConfig = {
-  experimental: {
-    i18n: {
-      defaultLocale: 'en',
-      locales: ['en', 'ja']
-    }
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'ja']
   },
   /**
    * @param {import('webpack').Configuration} config
