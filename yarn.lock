@@ -4267,10 +4267,10 @@ postcss@^7.0.14, postcss@^7.0.26, postcss@^7.0.32, postcss@^7.0.5, postcss@^7.0.
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postprocessing@^6.17.1, postprocessing@^6.17.4:
-  version "6.17.4"
-  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.17.4.tgz#015c1e8c8d04243875b0da4b52e9f3a407e2d3ec"
-  integrity sha512-rW22ucag46rPfOMKfHjEsUszVYrdvUd3q64muEq8cEqFgQRivmGS43Eijsho16CBigIF7CTb6yxHj5YtC+XCAQ==
+postprocessing@^6.17.1, postprocessing@^6.18.0:
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.18.0.tgz#4ed25b60e682e159ecb43932822f94dde2768107"
+  integrity sha512-AUmV+465StCApG6QG5J7lSYn1DmtwLDcaIQ7+aoyXsnw3qmhM3u31Xr0qpWrEmLDW52bQ9VntVCdXixHT5BUuA==
 
 prebuild-install@^5.3.5:
   version "5.3.6"
