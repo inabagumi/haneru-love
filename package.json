@@ -6,7 +6,7 @@
     "@react-three/drei": "^2.2.3",
     "@react-three/postprocessing": "^1.4.1",
     "next": "^10.0.0",
-    "postprocessing": "^6.17.4",
+    "postprocessing": "^6.18.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
