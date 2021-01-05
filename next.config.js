@@ -1,6 +1,17 @@
 const nextConfig = {
   i18n: {
     defaultLocale: 'en',
+    domains: [
+      {
+        defaultLocale: 'en',
+        domain: 'haneru.love'
+      },
+      {
+        defaultLocale: 'ja',
+        domain: 'ja.haneru.love'
+      }
+    ],
+    localeDetection: false,
     locales: ['en', 'ja']
   },
   webpack(config, { defaultLoaders }) {
