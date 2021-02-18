@@ -31,7 +31,7 @@
   "private": true,
   "resolutions": {
     "node-fetch": "^2.6.1",
-    "webpack": "^5.22.0"
+    "webpack": "^5.23.0"
   },
   "scripts": {
     "build": "next build",
