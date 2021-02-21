@@ -1,7 +1,7 @@
 {
   "author": "Haneru Developers",
   "dependencies": {
-    "@reach/skip-nav": "^0.13.0",
+    "@reach/skip-nav": "^0.13.2",
     "@react-aria/i18n": "^3.3.0",
     "next": "^10.0.7",
     "react": "^17.0.1",
