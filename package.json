@@ -11,7 +11,7 @@
   },
   "description": "Always Watching You.",
   "devDependencies": {
-    "@inabagumi/eslint-config-react": "^8.0.1",
+    "@inabagumi/eslint-config-react": "^9.0.0",
     "@inabagumi/prettier-config": "^1.1.2",
     "@next/eslint-plugin-next": "^10.0.8",
     "@types/eslint": "^7.2.7",
