@@ -29,10 +29,6 @@
   "license": "MIT",
   "name": "@inabagumi/haneru-love",
   "private": true,
-  "resolutions": {
-    "node-fetch": "^2.6.1",
-    "webpack": "^5.24.3"
-  },
   "scripts": {
     "build": "next build",
     "dev": "next",
