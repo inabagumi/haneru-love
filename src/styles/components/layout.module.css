@@ -1,0 +1,27 @@
+.conatiner {
+  min-height: 100vh;
+}
+
+.skipNavLink:focus {
+  z-index: 101;
+}
+
+.footer {
+  background-color: #455a64;
+  color: #fff;
+}
+
+.socialAccounts {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  font-size: max(2rem, 32px);
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 1em;
+}
+
+.socialAccount:not(:first-of-type) {
+  margin-left: 1em;
+}

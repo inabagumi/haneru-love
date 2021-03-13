@@ -1,0 +1,7 @@
+.section {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  min-height: 100vh;
+}

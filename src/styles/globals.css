@@ -1,0 +1,24 @@
+:root {
+  --hl-color-primary: #f4ae48;
+  --hl-color-secondary: #e85465;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  font-family: Lato, sans-serif;
+  line-height: 1;
+}
+
+html:lang(ja) {
+  font-family: Lato, Noto Sans JP, sans-serif;
+}
+
+body {
+  margin: 0;
+}

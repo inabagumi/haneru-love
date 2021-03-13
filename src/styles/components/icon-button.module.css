@@ -1,6 +1,4 @@
-import styled from 'styled-components'
-
-const IconButton = styled.button`
+.iconButton {
   align-items: center;
   background-color: transparent;
   border-width: 0;
@@ -14,15 +12,13 @@ const IconButton = styled.button`
   padding: 0;
   transition: background-color 0.2s ease;
   width: 1.5em;
+}
 
-  :focus {
-    box-shadow: ${(props) => props.theme.palette.primary} 0 0 0 2px;
-    outline: 0;
-  }
+.iconButton:focus {
+  box-shadow: var(--hl-color-primary) 0 0 0 2px;
+  outline: 0;
+}
 
-  :hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-`
-
-export default IconButton
+.iconButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

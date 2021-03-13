@@ -1,19 +1,14 @@
+import '../styles/globals.css'
 import { I18nProvider } from '@react-aria/i18n'
 import type { AppProps } from 'next/app'
-import type { FC } from 'react'
-import { ThemeProvider } from 'styled-components'
-import theme from '../theme'
+import type { VFC } from 'react'
 
-import '@reach/skip-nav/styles.css'
-
-const App: FC<AppProps> = ({ Component, pageProps, router }) => {
+const App: VFC<AppProps> = ({ Component, pageProps, router }) => {
   const locale = router.locale ?? 'en'
 
   return (
     <I18nProvider locale={locale}>
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Component {...pageProps} />
     </I18nProvider>
   )
 }
