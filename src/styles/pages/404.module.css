@@ -1,0 +1,12 @@
+.container {
+  padding-top: 2rem;
+}
+
+.link {
+  color: var(--hl-color-primary);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

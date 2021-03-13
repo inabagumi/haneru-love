@@ -1,9 +1,10 @@
+import '@reach/skip-nav/styles.css'
 import { SkipNavContent } from '@reach/skip-nav'
 import { useMessageFormatter } from '@react-aria/i18n'
-import NextLink from 'next/link'
-import type { FC } from 'react'
-import styled from 'styled-components'
+import type { NextPage } from 'next'
+import Link from 'next/link'
 import Layout from '../components/layout'
+import styles from '../styles/pages/404.module.css'
 
 const messages = {
   'en-US': {
@@ -16,33 +17,20 @@ const messages = {
   }
 }
 
-const Container = styled.main`
-  padding-top: 2rem;
-`
-
-const Link = styled.a`
-  color: ${(props) => props.theme.palette.primary};
-  text-decoration: none;
-
-  :hover {
-    text-decoration: underline;
-  }
-`
-
-const NotFound: FC = () => {
+const NotFound: NextPage = () => {
   const formatMessage = useMessageFormatter(messages)
 
   return (
     <Layout title={formatMessage('title')}>
-      <SkipNavContent>
-        <Container>
-          <p>
-            <NextLink href="/" passHref>
-              <Link>{formatMessage('backToTop')}</Link>
-            </NextLink>
-          </p>
-        </Container>
-      </SkipNavContent>
+      <SkipNavContent />
+
+      <main className={styles.container}>
+        <p>
+          <Link href="/">
+            <a className={styles.link}>{formatMessage('backToTop')}</a>
+          </Link>
+        </p>
+      </main>
     </Layout>
   )
 }

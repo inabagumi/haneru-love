@@ -1,10 +1,11 @@
-import { SkipNavLink as OriginalSkipNavLink } from '@reach/skip-nav'
+import '@reach/skip-nav/styles.css'
+import { SkipNavLink } from '@reach/skip-nav'
 import { useLocale, useMessageFormatter } from '@react-aria/i18n'
 import Head from 'next/head'
-import type { FC } from 'react'
+import type { ReactNode, VFC } from 'react'
 import { FaTwitter, FaYoutube } from 'react-icons/fa'
-import styled, { createGlobalStyle } from 'styled-components'
-import IconButton from './icon-button'
+import iconButtonStyles from '../styles/components/icon-button.module.css'
+import styles from '../styles/components/layout.module.css'
 import Navbar from './navbar'
 
 const messages = {
@@ -16,65 +17,12 @@ const messages = {
   }
 }
 
-const GlobalStyle = createGlobalStyle`
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-  }
-
-  html {
-    background-color: #fff;
-    font-family: Lato, sans-serif;
-    line-height: 1;
-  }
-
-  html:lang(ja) {
-    font-family: Lato, Noto Sans JP, sans-serif;
-  }
-
-  body {
-    margin: 0;
-  }
-`
-
-const Container = styled.div`
-  min-height: 100vh;
-`
-
-const SkipNavLink = styled(OriginalSkipNavLink)`
-  :focus {
-    z-index: 101;
-  }
-`
-
-const Footer = styled.footer`
-  background-color: #455a64;
-  color: #fff;
-`
-
-const SocialAccounts = styled.ul`
-  align-items: center;
-  display: flex;
-  font-size: 2rem;
-  font-size: max(2rem, 32px);
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 1em;
-`
-
-const SocialAccount = styled.li`
-  :not(:first-of-type) {
-    margin-left: 1em;
-  }
-`
-
 type Props = {
+  children: ReactNode
   title?: string
 }
 
-const Layout: FC<Props> = ({ children, title }) => {
+const Layout: VFC<Props> = ({ children, title }) => {
   const { locale } = useLocale()
   const formatMessage = useMessageFormatter(messages)
 
@@ -108,23 +56,23 @@ const Layout: FC<Props> = ({ children, title }) => {
         )}
       </Head>
 
-      <GlobalStyle />
-
-      <Container>
-        <SkipNavLink>{formatMessage('skipToContent')}</SkipNavLink>
+      <div className={styles.container}>
+        <SkipNavLink className={styles.skipNavLink}>
+          {formatMessage('skipToContent')}
+        </SkipNavLink>
 
         <Navbar />
 
         {children}
-      </Container>
+      </div>
 
-      <Footer>
+      <footer className={styles.footer}>
         <nav>
-          <SocialAccounts>
-            <SocialAccount>
-              <IconButton
+          <ul className={styles.socialAccounts}>
+            <li className={styles.socialAccount}>
+              <a
                 aria-label="Twitter"
-                as="a"
+                className={iconButtonStyles.iconButton}
                 href="https://twitter.com/Haneru_Inaba"
                 rel="noopener noreferrer"
                 role="button"
@@ -132,24 +80,24 @@ const Layout: FC<Props> = ({ children, title }) => {
                 translate="no"
               >
                 <FaTwitter aria-hidden="true" />
-              </IconButton>
-            </SocialAccount>
-            <SocialAccount>
-              <IconButton
+              </a>
+            </li>
+            <li className={styles.socialAccount}>
+              <a
                 aria-label="YouTube"
-                as="a"
+                className={iconButtonStyles.iconButton}
                 href="https://www.youtube.com/channel/UC0Owc36U9lOyi9Gx9Ic-4qg"
                 rel="noopener noreferrer"
                 role="button"
                 target="_blank"
-                translate="no"
+                translate="yes"
               >
                 <FaYoutube aria-hidden="true" />
-              </IconButton>
-            </SocialAccount>
-          </SocialAccounts>
+              </a>
+            </li>
+          </ul>
         </nav>
-      </Footer>
+      </footer>
     </>
   )
 }

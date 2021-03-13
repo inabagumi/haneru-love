@@ -1,12 +1,8 @@
-import type { FC } from 'react'
-import styled from 'styled-components'
+import type { VFC } from 'react'
+import styles from '../styles/components/hero.module.css'
 
-const Container = styled.div`
-  height: 80vh;
-`
-
-const Hero: FC = () => {
-  return <Container />
+const Hero: VFC = () => {
+  return <div className={styles.container} />
 }
 
 export default Hero
