@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { useCallback, useState } from 'react'
 import type { VFC } from 'react'
 import { MdClose, MdMenu } from 'react-icons/md'
-import iconButtonStyles from '../styles/components/icon-button.module.css'
 import styles from '../styles/components/navbar.module.css'
+import IconButton from './icon-button'
 
 const Navbar: VFC = () => {
   const [hideMenu, setHideMenu] = useState(true)
@@ -22,14 +22,14 @@ const Navbar: VFC = () => {
   return (
     <nav className={styles.container}>
       <div className={styles.menuButton}>
-        <button
+        <IconButton
           aria-hidden
-          className={iconButtonStyles.iconButton}
+          as="button"
           onClick={hideMenu ? openMenu : closeMenu}
           type="button"
         >
           {hideMenu ? <MdMenu /> : <MdClose />}
-        </button>
+        </IconButton>
       </div>
       <ul className={styles.menu}>
         <li
