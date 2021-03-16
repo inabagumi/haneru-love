@@ -4,8 +4,8 @@ import { useLocale, useMessageFormatter } from '@react-aria/i18n'
 import Head from 'next/head'
 import type { ReactNode, VFC } from 'react'
 import { FaTwitter, FaYoutube } from 'react-icons/fa'
-import iconButtonStyles from '../styles/components/icon-button.module.css'
 import styles from '../styles/components/layout.module.css'
+import IconButton from './icon-button'
 import Navbar from './navbar'
 
 const messages = {
@@ -70,9 +70,9 @@ const Layout: VFC<Props> = ({ children, title }) => {
         <nav>
           <ul className={styles.socialAccounts}>
             <li className={styles.socialAccount}>
-              <a
+              <IconButton
                 aria-label="Twitter"
-                className={iconButtonStyles.iconButton}
+                as="a"
                 href="https://twitter.com/Haneru_Inaba"
                 rel="noopener noreferrer"
                 role="button"
@@ -80,12 +80,12 @@ const Layout: VFC<Props> = ({ children, title }) => {
                 translate="no"
               >
                 <FaTwitter aria-hidden="true" />
-              </a>
+              </IconButton>
             </li>
             <li className={styles.socialAccount}>
-              <a
+              <IconButton
                 aria-label="YouTube"
-                className={iconButtonStyles.iconButton}
+                as="a"
                 href="https://www.youtube.com/channel/UC0Owc36U9lOyi9Gx9Ic-4qg"
                 rel="noopener noreferrer"
                 role="button"
@@ -93,7 +93,7 @@ const Layout: VFC<Props> = ({ children, title }) => {
                 translate="yes"
               >
                 <FaYoutube aria-hidden="true" />
-              </a>
+              </IconButton>
             </li>
           </ul>
         </nav>
