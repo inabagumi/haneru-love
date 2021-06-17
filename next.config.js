@@ -3,25 +3,6 @@ const nextConfig = {
     defaultLocale: 'en',
     localeDetection: false,
     locales: ['en', 'ja']
-  },
-  webpack(config, { defaultLoaders }) {
-    config.module.rules.push({
-      test: /\.(?:jpe?g|png|webp)$/,
-      use: [
-        defaultLoaders.babel,
-        {
-          loader: 'url-loader',
-          options: {
-            limit: 2048,
-            name: '[name].[contenthash:8].[ext]',
-            outputPath: 'static/media',
-            publicPath: '/_next/static/media'
-          }
-        }
-      ]
-    })
-
-    return config
   }
 }
 

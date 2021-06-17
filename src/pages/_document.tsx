@@ -1,10 +1,36 @@
-import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-class Document extends NextDocument {
+class MyDocument extends Document {
   render(): JSX.Element {
+    const { locale } = this.props
+
     return (
       <Html>
-        <Head />
+        <Head>
+          <link
+            as="style"
+            href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lato:wght@400;900"
+            rel="preload"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lato:wght@400;900"
+            rel="stylesheet"
+          />
+
+          {locale === 'ja' && (
+            <link
+              as="style"
+              href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans+JP"
+              rel="preload"
+            />
+          )}
+          {locale === 'ja' && (
+            <link
+              href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans+JP"
+              rel="stylesheet"
+            />
+          )}
+        </Head>
 
         <body>
           <Main />
@@ -16,4 +42,4 @@ class Document extends NextDocument {
   }
 }
 
-export default Document
+export default MyDocument
