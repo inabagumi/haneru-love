@@ -1,6 +1,6 @@
 import '@reach/skip-nav/styles.css'
 import { SkipNavLink } from '@reach/skip-nav'
-import { useLocale, useMessageFormatter } from '@react-aria/i18n'
+import { useMessageFormatter } from '@react-aria/i18n'
 import Head from 'next/head'
 import type { ReactNode, VFC } from 'react'
 import { FaTwitter, FaYoutube } from 'react-icons/fa'
@@ -23,38 +23,11 @@ type Props = {
 }
 
 const Layout: VFC<Props> = ({ children, title }) => {
-  const { locale } = useLocale()
   const formatMessage = useMessageFormatter(messages)
 
   return (
     <>
-      <Head>
-        {title && <title>{title}</title>}
-
-        <link
-          as="style"
-          href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lato:wght@400;900"
-          rel="preload"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lato:wght@400;900"
-          rel="stylesheet"
-        />
-
-        {locale === 'ja' && (
-          <>
-            <link
-              as="style"
-              href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans+JP"
-              rel="preload"
-            />
-            <link
-              href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans+JP"
-              rel="stylesheet"
-            />
-          </>
-        )}
-      </Head>
+      <Head>{title && <title>{title}</title>}</Head>
 
       <div className={styles.container}>
         <SkipNavLink className={styles.skipNavLink}>
