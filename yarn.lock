@@ -90,10 +90,10 @@
   resolved "https://registry.yarnpkg.com/@inabagumi/prettier-config/-/prettier-config-2.0.0.tgz#a6087e00f49ed8d1de53301dbd7391a3bacbe509"
   integrity sha512-b5tcbqpJv4gmJca3SQrRQ+QH/cDlMV5rS9gi9zTPXtIRGMByR4hLMuIffkknbKTOQ5UrDjvrWBbzY1mfw5geJA==
 
-"@internationalized/date@3.0.0-alpha.3":
-  version "3.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@internationalized/date/-/date-3.0.0-alpha.3.tgz#ebd4a10001b1aa6f32f5a6b82ee98cb8c1334cb3"
-  integrity sha512-lfUzsXEXNLSR5zmBlwBlNcawrJ8V+u9+JCyoTX76KAEuiHlKtk5wE7S0fMf1WllFHWdrENqy7LbN00FC3HhADQ==
+"@internationalized/date@3.0.0-alpha.4":
+  version "3.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@internationalized/date/-/date-3.0.0-alpha.4.tgz#3c13bf4560f65e9f48893eb158a9b5e2d05a12e8"
+  integrity sha512-kOJh6ugw8xraC46MLIQq8Cu+FyeCJKuHfY4eQPHkz4rPJmOiPGT0xYTYXqQHWcdFiwYSLNGvk/1DAMN7qRY1EA==
   dependencies:
     "@babel/runtime" "^7.6.2"
 
@@ -105,10 +105,10 @@
     "@babel/runtime" "^7.6.2"
     intl-messageformat "^9.6.12"
 
-"@internationalized/number@^3.0.5":
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/@internationalized/number/-/number-3.0.5.tgz#08b797b8eaad7c69d21d6f6d63d0dfd7b51f4cb4"
-  integrity sha512-NDplomyqMnwEWaD/53yYNTbksLaEGc1tvVLEy/RnLKsJW2aMrDCMNjX84FnPU9i6+CoiTKmv89J9ihKihxuVUg==
+"@internationalized/number@^3.0.6":
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/@internationalized/number/-/number-3.0.6.tgz#ab8ff440268aaa119cf88b970621d51001bb624d"
+  integrity sha512-6rKYYY/7V2rm45gg9ugV7VAV/1p5mHudgc1QJxJAdSddRWKz9RmSemV02pwE4k0mbsgvRRsqin7NgEb3LQFX9A==
   dependencies:
     "@babel/runtime" "^7.6.2"
 
@@ -216,15 +216,15 @@
     tiny-warning "^1.0.3"
     tslib "^2.3.0"
 
-"@react-aria/i18n@^3.3.7":
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/@react-aria/i18n/-/i18n-3.3.7.tgz#1d52bbb21dbed3855f55f2819b6486cb3a397068"
-  integrity sha512-GueMJ4psxeVMqBoCCvV77fRJDsVT5qq9SJameqVDewu5kGoaOkxTJi1V1s7D5Y+6taNq4cJg0Qd73l3gMXC35w==
+"@react-aria/i18n@^3.3.8":
+  version "3.3.8"
+  resolved "https://registry.yarnpkg.com/@react-aria/i18n/-/i18n-3.3.8.tgz#a5144504f24ebc123fa647f11afb5d7a01db42a8"
+  integrity sha512-9yEaBRJ6Lxd20mUPvzorIJraYp3TD1yKRo4BTTuO/Om9BPSp1VW8JhUuyMZNouo1oQffxddFXqppuayLPwhJlQ==
   dependencies:
     "@babel/runtime" "^7.6.2"
-    "@internationalized/date" "3.0.0-alpha.3"
+    "@internationalized/date" "3.0.0-alpha.4"
     "@internationalized/message" "^3.0.5"
-    "@internationalized/number" "^3.0.5"
+    "@internationalized/number" "^3.0.6"
     "@react-aria/ssr" "^3.1.2"
     "@react-aria/utils" "^3.11.3"
     "@react-types/shared" "^3.11.2"
