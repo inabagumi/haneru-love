@@ -90,17 +90,17 @@
   resolved "https://registry.yarnpkg.com/@inabagumi/prettier-config/-/prettier-config-2.0.0.tgz#a6087e00f49ed8d1de53301dbd7391a3bacbe509"
   integrity sha512-b5tcbqpJv4gmJca3SQrRQ+QH/cDlMV5rS9gi9zTPXtIRGMByR4hLMuIffkknbKTOQ5UrDjvrWBbzY1mfw5geJA==
 
-"@internationalized/date@3.0.0-rc.1":
-  version "3.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/@internationalized/date/-/date-3.0.0-rc.1.tgz#828f79517249ac65982ec760205089a98ec56555"
-  integrity sha512-IHc1NqUTA/fo9nf0pwRXrMjrabJ/9vTw5RIFAF3qS8JsdEGnw3dIyDb/+ipjEEqZyHVHHXwnqD8hKM18gGoWTg==
+"@internationalized/date@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@internationalized/date/-/date-3.0.0.tgz#078fabe35d148717ed817746673042281b77a958"
+  integrity sha512-mvlQCeYNg7JgO+QtIIx1zFJx10CJNVnt8cOjW2pYab1Ap/c7BYybS37Z5oTCdmRZbvnpmWtjhOEH324zlgWHLw==
   dependencies:
     "@babel/runtime" "^7.6.2"
 
-"@internationalized/message@^3.0.7":
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/@internationalized/message/-/message-3.0.7.tgz#4b8d681dc1c2afdcb3b4feb273611e0b752517b2"
-  integrity sha512-f+3VC8NIR5rbk3un9WnGRNpAViWOUbnB2LfzYGlpC38XZ1GzCzi2AcCQ8qhgENXiNk8qetZ1TwJYmCZ/M8UM4Q==
+"@internationalized/message@^3.0.8":
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@internationalized/message/-/message-3.0.8.tgz#0d57d95057f60abe28988e35f42b0790ffdcaa08"
+  integrity sha512-5B9zvBgyPZi0ciPgisW835WTuvjVIWFf4IJex1Swb5mDwonbi0lO2teAjBVGV25NTI0OKq1GM9PAWXXUzv6Waw==
   dependencies:
     "@babel/runtime" "^7.6.2"
     intl-messageformat "^9.12.0"
@@ -221,18 +221,18 @@
     tiny-warning "^1.0.3"
     tslib "^2.3.0"
 
-"@react-aria/i18n@^3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@react-aria/i18n/-/i18n-3.4.0.tgz#7ee8c468ce85b959ecef90e403332cbbc1ab9d01"
-  integrity sha512-2pU13zT9bgD4eMlqfJ/Um2wjYRS7ORvR0jqGSfNzY9Lx+1IeSCqTkBNubT7bCV+Oc0LMUR93fGRDxfdtMyJCog==
+"@react-aria/i18n@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@react-aria/i18n/-/i18n-3.4.1.tgz#e79a52d30d542798c7a087d6f248034773d65cb1"
+  integrity sha512-/nrMpWOFmbn9R04JfWgGFRJ/oYBZLIydLBuWVw3ugwyKrHhIj/xRFrAMcGKspEZIymIANv9cnoTYhwk8d/DCEg==
   dependencies:
     "@babel/runtime" "^7.6.2"
-    "@internationalized/date" "3.0.0-rc.1"
-    "@internationalized/message" "^3.0.7"
+    "@internationalized/date" "^3.0.0"
+    "@internationalized/message" "^3.0.8"
     "@internationalized/number" "^3.1.1"
     "@react-aria/ssr" "^3.2.0"
-    "@react-aria/utils" "^3.13.0"
-    "@react-types/shared" "^3.13.0"
+    "@react-aria/utils" "^3.13.1"
+    "@react-types/shared" "^3.13.1"
 
 "@react-aria/ssr@^3.2.0":
   version "3.2.0"
@@ -241,15 +241,15 @@
   dependencies:
     "@babel/runtime" "^7.6.2"
 
-"@react-aria/utils@^3.13.0":
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/@react-aria/utils/-/utils-3.13.0.tgz#a9523a9d4b19839601753749b65e19ac0ad5ca86"
-  integrity sha512-iF/yYkUVCc2Cgyu7o8oE6w7a67P/M8gXKDR2tp592Be6iUKQPy2kb49VvSh+Bom6Wq/To3h4UBOLFI6I0VXJYA==
+"@react-aria/utils@^3.13.1":
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/@react-aria/utils/-/utils-3.13.1.tgz#45557fdc7ae9de057a83014013bf09e54d074c96"
+  integrity sha512-usW6RoLKil4ylgDbRcaQ5YblNGv5ZihI4I9NB8pdazhw53cSRyLaygLdmHO33xgpPnAhb6Nb/tv8d5p6cAde+A==
   dependencies:
     "@babel/runtime" "^7.6.2"
     "@react-aria/ssr" "^3.2.0"
     "@react-stately/utils" "^3.5.0"
-    "@react-types/shared" "^3.13.0"
+    "@react-types/shared" "^3.13.1"
     clsx "^1.1.1"
 
 "@react-stately/utils@^3.5.0":
@@ -259,10 +259,10 @@
   dependencies:
     "@babel/runtime" "^7.6.2"
 
-"@react-types/shared@^3.13.0":
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/@react-types/shared/-/shared-3.13.0.tgz#01ef4312886ed8d449065f44168e2bfd3134acb7"
-  integrity sha512-ha+Xzn6gG/aww2nl7A6kYSJdYQypTxdYgNrJvddDB7h0QuyVQTf27iVleOWrmkHQ1TM9Q/FUbMdJ93CgdtP26g==
+"@react-types/shared@^3.13.1":
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/@react-types/shared/-/shared-3.13.1.tgz#eda5e3744971606f753baf7879136bf8e3f707ab"
+  integrity sha512-EHQqILDJeDvnloy5VV9lnnEjpCMwH1ghptCfa/lz9Ht9nwco3qGCvUABkWyND7yU1Adt3A/1oJxhpRUu3eTlyg==
 
 "@rushstack/eslint-patch@^1.1.3":
   version "1.1.3"
