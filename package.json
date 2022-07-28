@@ -3,7 +3,7 @@
   "dependencies": {
     "@reach/skip-nav": "^0.17.0",
     "@reach/utils": "^0.17.0",
-    "@react-aria/i18n": "^3.4.1",
+    "@react-aria/i18n": "^3.5.0",
     "clsx": "^1.2.1",
     "next": "^12.2.3",
     "react": "^18.2.0",
