@@ -233,10 +233,10 @@
     tiny-warning "^1.0.3"
     tslib "^2.3.0"
 
-"@react-aria/i18n@^3.5.0":
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/@react-aria/i18n/-/i18n-3.5.0.tgz#92234e188852fc9d3dd65c0962460e1f50afc7e0"
-  integrity sha512-9hqOOmG69QdVjTGWHADPrBxxMffz3wi4/ya0VZOKlGbFwqRZZp3TSpz0JdH1kE7h3+YIfrz/jPFJ/CADx9bJLQ==
+"@react-aria/i18n@^3.5.1":
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@react-aria/i18n/-/i18n-3.5.1.tgz#aba5e50266a3f15c195b8dc85682251af5c52211"
+  integrity sha512-PtlQ/W1PXVKzCGK86MuGuCzYBwENDBjrQ2a4ux+BBQ2Dk8ZXEARSp9JaMFuOdiloXc/p4FoxCVoB+lhu4RCScg==
   dependencies:
     "@babel/runtime" "^7.6.2"
     "@internationalized/date" "^3.0.1"
